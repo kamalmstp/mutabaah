@@ -1,53 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Toto Singapura 6D | Log in</title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="<?php echo base_url('assets/bower_components/bootstrap/dist/css/bootstrap.min.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/bower_components/font-awesome/css/font-awesome.min.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/bower_components/Ionicons/css/ionicons.min.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/iCheck/square/blue.css');?>">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="/image/png" href="<?php echo base_url('assets/layout_login/images/icons/favicon.ico');?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/layout_login/vendor/bootstrap/css/bootstrap.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/layout_login/fonts/font-awesome-4.7.0/css/font-awesome.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/layout_login/vendor/animate/animate.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/layout_login/vendor/css-hamburgers/hamburgers.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/layout_login/vendor/select2/select2.min.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/layout_login/css/util.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/layout_login/css/main.css');?>">
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="#"><b>Toto Singapura </b>6D</a>
-  </div>
-  <div class="login-box-body">
 
-    <form action="<?php echo site_url('login/validate_login');?>" method="post">
-      <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="username" placeholder="Username">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="password" placeholder="Password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+<body>
+    
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+
+<form method="POST" action="<?php echo site_url('login/validate_login'); ?>" class="login100-form validate-form">
+
+    
+    <span class="login100-form-title">
+        Login
+    </span>
+
+    <div class="wrap-input100" data-validate = "Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" name="username" placeholder="User Name" id="username">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+        <input class="input100" type="password" name="password" placeholder="Password" id="password">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        </span>
+    </div>
+    
+    <div class="container-login100-form-btn">
+        <button type="submit" class="login100-form-btn">
+            Login
+        </button>
+    </div>
+
+    <!-- <div class="text-center p-t-12">
+        <span class="txt1">
+            Lupa
+        </span>
+        <a class="txt2" href="{{route('show-reset')}}">
+            Username / Password ?
+        </a>
+    </div> -->
+
+    <div class="text-center p-t-12">
+        <!-- @if($errors->any())
+          <p style="color: red">{{$errors->first()}}</p>
+        @endif -->
+    </div>
+
+</form>
+
+            </div>
         </div>
-        <!-- /.col -->
-      </div>
-    </form>
+    </div>
+ 
+    
+    <script src="<?php echo base_url('assets/layout_login/vendor/jquery/jquery-3.2.1.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/layout_login/vendor/bootstrap/js/popper.js');?>"></script>
+    <script src="<?php echo base_url('assets/layout_login/vendor/bootstrap/js/bootstrap.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/layout_login/vendor/select2/select2.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/layout_login/vendor/tilt/tilt.jquery.min.js');?>"></script>
+    <script >
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <script src="<?php echo base_url('assets/layout_login/js/main.js');?>"></script>
 
-  </div>
-  <!-- /.login-box-body -->
-</div>
-<!-- /.login-box -->
-
-<!-- jQuery 3 -->
-<script src="<?php echo base_url('assets/bower_components/jquery/dist/jquery.min.js');?>"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="<?php echo base_url('assets/bower_components/bootstrap/dist/js/bootstrap.min.js');?>"></script>
-<!-- iCheck -->
-<script src="<?php echo base_url('assets/plugins/iCheck/icheck.min.js');?>"></script>
 </body>
 </html>
