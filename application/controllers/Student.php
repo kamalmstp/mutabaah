@@ -36,7 +36,7 @@ class Student extends CI_Controller {
             redirect(site_url('login'), 'refresh');
             
 
-        $data = $this->db->get('activity_bank')->result_array();
+        $data = $this->db->get_where('activity_bank', array())->result_array();
         
         $page_data['data']  = $data;
         $page_data['page_name']  = 'sholat';

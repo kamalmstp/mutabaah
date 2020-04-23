@@ -41,7 +41,9 @@
 				<div class="menu__header"></div>
 				<ul class="menu__list">
 					<li><a rel="noopener" href="<?=site_url();?>">Home</a></li>
-					<li><a rel="noopener" href="<?=site_url('student/sholat');?>">Daily Activity</a></li>
+					<li><a rel="noopener" href="<?=site_url('student/sholat');?>">Ibadah Harian</a></li>
+					<li><a rel="noopener" href="<?=site_url('student/tugas');?>">Tugas Harian</a></li>
+					<li><a rel="noopener" href="<?=site_url('student/history');?>">History</a></li>
 				</ul>
 			</div>
 			<div class="menu__overlay"></div>
